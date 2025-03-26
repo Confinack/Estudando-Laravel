@@ -13,6 +13,7 @@ use App\Http\Middleware\LogAcessoMiddleware;
 |
 */
 
+<<<<<<< HEAD
 // Páginas da primeira aula
 // Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
 Route::get('/helloWorld', [App\Http\Controllers\Principal::class, 'helloWorld']);
@@ -26,4 +27,12 @@ Route::get('/listar-animais', [App\Http\Controllers\ListarAnimais::class, 'lista
 Route::get('/detalhes-animal', [App\Http\Controllers\DetalhesAnimal::class, 'detalhesAnimal'])->name("detalhes-animal");
 Route::get('/login', [App\Http\Controllers\Login::class, 'login'])->name("login");
 Route::get('/registro', [App\Http\Controllers\Registro::class, 'registro'])->name("registro");
+=======
+Route::get('/', [App\Http\Controllers\Inicio::class, 'inicio'])->name('pagina-inicial');
+Route::get('/adocao', [App\Http\Controllers\Adocao::class, 'adocao'])->name('adocao');
+Route::get('/detalhes-animal', [App\Http\Controllers\DetalhesAnimal::class, 'detalhesAnimal'])->name('detalhes-animal');
+Route::get('/listar-animais', [App\Http\Controllers\ListarAnimais::class, 'listarAnimais'])->name('listar-animais');
+Route::get('/login', [App\Http\Controllers\Login::class, 'login'])->name('login');
+Route::get('/registro', [App\Http\Controllers\Registro::class, 'registro'])->name('registro');
+>>>>>>> teste/4ANO-Fatec-Adocao-Animais
 
