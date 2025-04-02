@@ -10,4 +10,8 @@ class Adocao extends Controller
     function adocao(){
         return view('adocao');
     }
+
+    function registroAnimal(){
+        return view('animalCreate');
+    }
 }

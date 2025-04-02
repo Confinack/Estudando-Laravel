@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Usuario;
 
 class Registro extends Controller
 {
@@ -12,6 +13,10 @@ class Registro extends Controller
     }
 
     function criarConta(Request $req){
-        dd($req->all());
+        // dd($req->all());
+
+        $user = new Usuario();
+        $user->create($req->all());
+        return view("inicio");
     }
 }
