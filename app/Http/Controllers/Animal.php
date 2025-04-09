@@ -12,6 +12,11 @@ class Animal extends Controller
         return view('animal');
     }
 
+    function getAnimais(){
+        // Collection -> Array de objetos
+        $animais = Animals()::all;
+    }
+
     function addAnimal(Request $req){
         $animal = new Animals();
         $animal->create($req->all());
