@@ -17,7 +17,7 @@ class Personagem extends Controller
 
     function salvarPersonagem(Request $req){
         $personagem = new Personagens();
-        $personagem = $dados->all();
+        $personagem = $req->all();
         $personagem->save();
     }
 }
