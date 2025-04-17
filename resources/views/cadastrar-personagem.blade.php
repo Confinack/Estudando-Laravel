@@ -35,7 +35,7 @@
                     <input type = "text" id = "power" name = "power" required />
                 </div>
             </div>
-            <button type = "submit">Cadastrar</button>
+            <button type = "submit"></button>
         </form>
     </body>
 </html>

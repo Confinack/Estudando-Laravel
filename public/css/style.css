@@ -98,7 +98,7 @@ nav a:hover::after {
 form {
     min-height: 20vh;
     width: 35vw;
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1.5rem;
     background-color: white;
     border-radius: 0.25rem;
 
@@ -155,9 +155,28 @@ input:valid {
 button[type="submit"] {
     height: 48px;
     width: 100%;
-    outline: 1px solid transparent;
-    background-color: #428cd2;
+    outline: 1px solid #428cd2;
     border: none;
+
+    transform: skewX(-8deg);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]::after {
+    content: "Cadastrar";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 100%;
+    width: 100%;
+    background-color: #428cd2;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     text-transform: uppercase;
     color: white;
@@ -166,10 +185,10 @@ button[type="submit"] {
     transition: 0.2s;
 }
 
-button[type="submit"]:hover {
-    background-color: transparent;
-    outline: 1px solid #428cd2;
-
+button[type="submit"]:hover::after {
+    top: -8px;
+    left: 8px;
+    transform: translate(0, 0);
+    
     letter-spacing: 2px;
-    color: black;
 }
