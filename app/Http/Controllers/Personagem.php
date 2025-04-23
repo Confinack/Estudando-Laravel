@@ -12,7 +12,10 @@ class Personagem extends Controller
     }
 
     function listarPersonagem(){
-        return view("listar-personagem");
+        // O padrao é collection, mas a gente converte para array. Se usarmos colletion podemos interpretar como objeto na view.
+        $personagem = Personagens::all()->toArray();
+
+        return view("listar-personagem", ["personagens" => $personagem]);
     }
 
     function salvarPersonagem(Request $req){
