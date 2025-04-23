@@ -17,7 +17,10 @@ class Personagem extends Controller
 
     function salvarPersonagem(Request $req){
         $personagem = new Personagens();
-        $personagem = $req->all();
+        $personagem->nome = $req->input("name");
+        $personagem->poder = $req->input("power");
         $personagem->save();
+
+        return view("cadastrar-personagem");
     }
 }
